@@ -3,5 +3,12 @@
 {% load i18n %}
 
 {% block content %}
-    {% trans "Register on DOU Hackathon" %}
+    <h1>{% trans "Register on DOU Hackathon" %}</h1>
+    <form action="{{ request.path }}" method="post" accept-charset="utf-8">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>
+            <button type="submit">{% trans "Participate" %}</button>
+        </p>
+    </form>
 {% endblock %}
