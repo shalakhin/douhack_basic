@@ -9,12 +9,12 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Olexandr Shalakhin', 'olexandr@shalakhin.com'),
 )
 
 MANAGERS = ADMINS
-TIME_ZONE = 'America/Chicago'
-LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'Europe/Kiev'
+LANGUAGE_CODE = 'ru-UA'
 SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
@@ -69,6 +69,10 @@ TEMPLATE_DIRS = (
     PROJECT_ROOT.child('templates'),
 )
 
+PROJECT_APPS = (
+    'core',
+)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -79,7 +83,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'south',
-)
+) + PROJECT_APPS
 
 LOGGING = {
     'version': 1,
