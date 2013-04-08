@@ -7,3 +7,5 @@ Unipath
 psycopg2
 PIL
 django-compressor
+celery
+djcelery

@@ -2,6 +2,9 @@ import os
 import sys
 from unipath import Path
 
+# Specific settings
+CONFIRM_IN_DAYS = 14
+
 PROJECT_ROOT = Path(__file__).ancestor(3)
 sys.path.append(PROJECT_ROOT.child('apps'))
 
@@ -71,6 +74,7 @@ TEMPLATE_DIRS = (
 
 PROJECT_APPS = (
     'core',
+    'registrations',
 )
 
 INSTALLED_APPS = (
