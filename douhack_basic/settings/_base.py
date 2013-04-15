@@ -87,6 +87,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'south',
+    'gunicorn',
 ) + PROJECT_APPS
 
 LOGGING = {
