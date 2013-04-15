@@ -15,6 +15,7 @@ ADMINS = (
     ('Olexandr Shalakhin', 'olexandr@shalakhin.com'),
 )
 
+ALLOWED_HOSTS = ['douhack.herokuapp.com']
 MANAGERS = ADMINS
 TIME_ZONE = 'Europe/Kiev'
 LANGUAGE_CODE = 'ru-UA'
