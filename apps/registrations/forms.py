@@ -10,4 +10,7 @@ class ParticipantForm(forms.ModelForm):
 
     class Meta:
         model = Participant
-        fields = ('name', 'email', 'technologies', 'city',)
+        fields = (
+            'name', 'contacts', 'email', 'city', 'need_apartments',
+            'need_railway_station', 'how_got_info'
+        )
