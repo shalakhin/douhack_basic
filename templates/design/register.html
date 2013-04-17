@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Регистрация :: DOU Хакатон в Севастополе - 18 мая</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Le styles -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container" style="margin-top: 150px;">
+			<div class="row">
+				<div class="span6">
+					<h1>DOU Хакатон в Севастополе</h1>
+				</div>
+				<div class="span6" style="padding-top: 15px;">
+					<a href="/" class="btn btn-danger">Что это?</a>
+					<a href="/contacts" class="btn btn-danger">Контакты</a>
+					<a href="/register" class="btn btn-danger">Регистрация</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">
+					<form class="form-horizontal">
+						<legend>Регистрационная форма участника</legend>
+						<div class="alert alert-error">
+							В этот раз, нам возможно придется взимать плату с участников Хакатона в размере 100 грн. Это связано с трудностями в привлечении партнеров с которыми мы столкнулись в процессе подготовки мероприятия. В любом случае, мы известим Вас о такой необходимости минимум за неделю до мероприятия.
+						</div>
+						<p>Для того, чтобы принять участие в Хакатоне, пожалуйста, заполните простую регистрационную форму. Мы обязуемся не передавать Ваши контактные данные третьим лицам без Вашего ведома.<br/><br/></p>
+						<div class="control-group">
+							<label class="control-label" for="fio">ФИО</label>
+							<div class="controls">
+								<input type="text" id="fio" name="fio" placeholder="Ваши фамилия, имя">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="phone">Телефон для связи</label>
+							<div class="controls">
+								<input type="text" id="phone" name="phone" value="+380">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="email">Email</label>
+							<div class="controls">
+								<input type="email" id="email" name="email" placeholder="your.email@gmail.com">
+								<span class="help-inline">Для отправки сообщений о мероприятии + отчет</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="city">Город</label>
+							<div class="controls">
+								<input type="text" id="city" name="city" placeholder="откуда Вы?">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="marketing">Откуда Вы узнали о мероприятии?</label>
+							<div class="controls">
+								<textarea id="marketing" name="marketing"></textarea>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<label class="checkbox">
+									<input type="checkbox" name="meet-me"> Меня нужно встречать на вокзале
+								</label>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<label class="checkbox">
+									<input type="checkbox" name="need-hostel"> Мне нужна помощь в поиске жилья
+								</label>
+							</div>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-danger">Зарегистрироваться</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<br/><br/>
+			<div class="row">
+				<div class="span12" style="margin-bottom: 30px;">
+					<p>Хакатон проводиться группой <a href="/contacts" class="red-link">активистов</a> при поддержке <a href="http://dou.ua" class="red-link">DOU.ua</a> и, конечно же, компаний-партнеров:</p>
+					<a href="http://dou.ua"><img src="img/dou.jpg" /></a>
+					<a href="http://smartbit.in.ua/"><img src="img/smartbit.png" /></a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

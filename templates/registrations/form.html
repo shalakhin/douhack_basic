@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}
+    Регистрация :: DOU Хакатон в Севастополе - 18 мая
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="span12">
+        <form class="form-horizontal" action="{{ request.path }}" method="post" accept-charset="utf-8">
+            <legend>Регистрационная форма участника</legend>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="form-actions">
+                <button type="submit" class="btn btn-danger">Зарегистрироваться</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
