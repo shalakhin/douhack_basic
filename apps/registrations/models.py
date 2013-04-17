@@ -25,6 +25,8 @@ class Participant(models.Model):
             default=False, blank=True)
     created = models.DateTimeField(_('Created'), auto_now_add=True, blank=True)
     updated = models.DateTimeField(_('Updated'), auto_now=True, blank=True)
+    internal_comments = models.TextField(_('Internal comments'),
+        help_text=_('visible only for registered users'), blank=True)
 
     def __unicode__(self):
         return self.name
