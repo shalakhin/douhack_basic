@@ -1,6 +1,11 @@
-# douhack basic
+# Website for DOU Hackatons.
 
-Initial work on dou hackathons web service.
-
-* users must be able to register for the event
+Functionality:
+* users can register for events
+* admin page for subscribed users
+* internal comments for subscribers
 * emails with confirmation must be sent in ... days
+* i18n (English default)
+* Styled with Twitter Bootstrap
+
+Demo can be found here: http://douhack.herokuapp.com/
