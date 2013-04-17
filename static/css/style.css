@@ -1,0 +1,12 @@
+
+	body {
+		background: url('../img/bayan.jpg') 101% 0px no-repeat;
+	}
+
+	.red-link {
+		color: red;
+	}
+
+	.red-link:hover {
+		color: #666;
+	}
