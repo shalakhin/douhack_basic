@@ -9,9 +9,12 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'core.views.home', name='home'),
+    url('contacts/$', 'core.views.contacts', name='contacts'),
     # url(r'^douhack_basic/', include('douhack_basic.foo.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^register/', 'core.views.register', name='register'),
+    url('^pages/', include('django.contrib.flatpages.urls')),
 )
 
 # if settings.DEBUG:
