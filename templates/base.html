@@ -26,25 +26,25 @@
 					<h1>{% trans "DOU Хакатон в Севастополе" %}</h1>
 				</div>
 				<div class="span6" style="padding-top: 15px;">
-					<a href="{% url 'home' %}" class="btn btn-danger">{% trans "Что это?" %}</a>
-					<a href="{% url 'contacts' %}" class="btn btn-danger">Контакты</a>
-					<a href="{% url 'register' %}" class="btn btn-danger">Регистрация</a>
+					<a href="{% url 'home' %}" class="btn btn-danger btn-with-white-border">{% trans "Что это?" %}</a>
+					<a href="{% url 'contacts' %}" class="btn btn-danger btn-with-white-border">Контакты</a>
+					<a href="{% url 'register' %}" class="btn btn-danger btn-with-white-border">Регистрация</a>
 				</div>
 			</div>
 
-        {% block header %}{% endblock %}
-        {% block content %}{% endblock %}
-        {% block footer %}{% endblock %}
+	        {% block header %}{% endblock %}
+	        {% block content %}{% endblock %}
+	        {% block footer %}{% endblock %}
 
-        <br/><br/>
-        <div class="row">
-            <div class="span12">
-                <p>Хакатон проводится группой <a href="/contacts" class="red-link">активистов</a> при поддержке <a href="http://dou.ua" class="red-link">DOU.ua</a> и, конечно же, компаний-партнеров:</p>
-                <a href="http://dou.ua"><img src="{% static 'img/dou.jpg' %}" /></a>
-                <a href="http://smartbit.in.ua/"><img src="{% static 'img/smartbit.png' %}" /></a>
-            </div>
-        </div>
+	        <br/><br/>
+	        <div class="row">
+	            <div class="span12">
+	                <p>Хакатон проводится группой <a href="/contacts" class="red-link">активистов</a> при поддержке <a href="http://dou.ua" class="red-link">DOU.ua</a> и, конечно же, компаний-партнеров:</p>
+	                <a href="http://dou.ua"><img src="{% static 'img/dou.jpg' %}" /></a>
+	                <a href="http://smartbit.in.ua/"><img src="{% static 'img/smartbit.png' %}" /></a>
+	                <a href="http://sevstar.net/"><img src="{% static 'img/sevstar.jpg' %}" /></a>
+	            </div>
+	        </div>
 		</div>
-	    </div>
 	</body>
 </html>
