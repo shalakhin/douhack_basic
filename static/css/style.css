@@ -10,3 +10,7 @@
 	.red-link:hover {
 		color: #666;
 	}
+
+	.btn-with-white-border {
+		border: solid #fff 2px;
+	}
