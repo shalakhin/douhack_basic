@@ -14,3 +14,13 @@
 	.btn-with-white-border {
 		border: solid #fff 2px;
 	}
+
+	.social-buttons {
+		list-style: none;
+	}
+
+	.social-buttons li {
+		list-style: none;
+		display: inline;
+		margin-right: 10px;
+	}
