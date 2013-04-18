@@ -1,4 +1,6 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
+from django.utils.translation import ugettext as _
 
 from registrations.forms import ParticipantForm
 
@@ -26,8 +28,9 @@ def register(request):
     form = ParticipantForm(request.POST or None)
     if request.method == 'POST':
         if form.is_valid():
-            # TODO add messages here
             form.save()
+            messages.add_message(
+                request, messages.INFO, _('You are registered'))
             return redirect('home')
     context = {
         'form': form        
