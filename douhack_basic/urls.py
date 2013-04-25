@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     # url(r'^douhack_basic/', include('douhack_basic.foo.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^register/', 'core.views.register', name='register'),
     url('^pages/', include('django.contrib.flatpages.urls')),
 )

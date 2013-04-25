@@ -18,6 +18,7 @@ ADMINS = (
 ALLOWED_HOSTS = ['douhack.herokuapp.com']
 MANAGERS = ADMINS
 TIME_ZONE = 'Europe/Kiev'
+LOCALE_PATHS = (PROJECT_ROOT.child('locale'),)
 LANGUAGE_CODE = 'ru-UA'
 SITE_ID = 1
 USE_I18N = True
@@ -59,6 +60,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # 'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -90,6 +92,13 @@ INSTALLED_APPS = (
     'south',
     'gunicorn',
 ) + PROJECT_APPS
+
+ugettext = lambda s: s
+LANGUAGES = (
+    ('en', ugettext('English')),
+    ('ru', ugettext('Russian')),
+    ('ua', ugettext('Ukrainian')),
+)
 
 LOGGING = {
     'version': 1,
