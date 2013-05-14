@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-14 04:35+0300\n"
+"POT-Creation-Date: 2013-05-15 02:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,15 +21,15 @@ msgstr ""
 
 #: apps/core/views.py:35
 msgid "Sorry but registration is closed!"
-msgstr ""
+msgstr "Извините, но регистрация закрыта!"
 
 #: apps/core/views.py:60
 msgid "You successfully confirmed participation! Thanks!"
-msgstr ""
+msgstr "Вы успешно подтвердили регистрацию! Спасибо!"
 
 #: apps/core/views.py:66
 msgid "You haven't confirmed your participation!"
-msgstr ""
+msgstr "Вы не подтвердили ваше участие!"
 
 #: apps/registrations/models.py:13
 msgid "Name"
@@ -83,6 +83,10 @@ msgstr "Внутренний комментарий"
 #: apps/registrations/models.py:31
 msgid "visible only for registered users"
 msgstr "Видимо только для зарегистрированных пользователей"
+
+#: apps/registrations/tasks.py:26
+msgid "Mail subject"
+msgstr "Подтверждение на регистрацию"
 
 #: douhack_basic/settings/_base.py:106
 msgid "English"
