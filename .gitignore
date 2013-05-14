@@ -17,3 +17,4 @@ atlassian-ide-plugin.xml
 # Static and other
 .sass-cache
 static_collected
+*.db
