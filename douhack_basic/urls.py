@@ -15,6 +15,9 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^register/', 'core.views.register', name='register'),
+    url(r'^confirm/(?P<id>\d+)/(?P<code>.+)/$',
+        'core.views.confirm_registration',
+        name='confirm'),
     url('^pages/', include('django.contrib.flatpages.urls')),
 )
 

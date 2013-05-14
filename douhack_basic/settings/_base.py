@@ -1,6 +1,10 @@
 import os
 import sys
+import datetime
 from unipath import Path
+
+
+from djcelery import setup_loader
 
 # Specific settings
 CONFIRM_IN_DAYS = 14
@@ -91,7 +95,11 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'south',
     'gunicorn',
+    'djcelery',
 ) + PROJECT_APPS
+
+CELERY_TASK_RESULT_EXPIRES = datetime.timedelta(minutes=30)
+setup_loader()
 
 ugettext = lambda s: s
 LANGUAGES = (
