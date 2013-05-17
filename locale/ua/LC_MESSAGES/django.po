@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-15 02:29+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: apps/core/views.py:35
+msgid "Sorry but registration is closed!"
+msgstr ""
+
+#: apps/core/views.py:60
+msgid "You successfully confirmed participation! Thanks!"
+msgstr ""
+
+#: apps/core/views.py:66
+msgid "You haven't confirmed your participation!"
+msgstr ""
+
+#: apps/registrations/models.py:13
+msgid "Name"
+msgstr ""
+
+#: apps/registrations/models.py:14
+msgid "Your phone number"
+msgstr ""
+
+#: apps/registrations/models.py:15
+msgid "E-mail"
+msgstr ""
+
+#: apps/registrations/models.py:16
+msgid "City"
+msgstr ""
+
+#: apps/registrations/models.py:18
+msgid "Need help apartments"
+msgstr ""
+
+#: apps/registrations/models.py:20
+msgid "Need help to find railway station"
+msgstr ""
+
+#: apps/registrations/models.py:22
+msgid "How did you get to know about the event?"
+msgstr ""
+
+#: apps/registrations/models.py:24
+msgid "Confirmation code"
+msgstr ""
+
+#: apps/registrations/models.py:26
+msgid "Participation confirmed"
+msgstr ""
+
+#: apps/registrations/models.py:28
+msgid "Created"
+msgstr ""
+
+#: apps/registrations/models.py:29
+msgid "Updated"
+msgstr ""
+
+#: apps/registrations/models.py:30
+msgid "Internal comments"
+msgstr ""
+
+#: apps/registrations/models.py:31
+msgid "visible only for registered users"
+msgstr ""
+
+#: apps/registrations/tasks.py:26
+msgid "Mail subject"
+msgstr ""
+
+#: douhack_basic/settings/_base.py:106
+msgid "English"
+msgstr ""
+
+#: douhack_basic/settings/_base.py:107
+msgid "Russian"
+msgstr ""
+
+#: douhack_basic/settings/_base.py:108
+msgid "Ukrainian"
+msgstr ""
+
+#: templates/404.html:10
+msgid "Something went wrong!"
+msgstr ""
+
+#: templates/base.html:8
+msgid "DOU Хакатон в Севастополе - 18 мая"
+msgstr ""
+
+#: templates/base.html:44
+msgid "DOU Хакатон в Севастополе"
+msgstr ""
+
+#: templates/base.html:47
+msgid "Что это?"
+msgstr ""
+
+#: templates/registrations/form.html:12
+msgid "Registration is closed!"
+msgstr ""

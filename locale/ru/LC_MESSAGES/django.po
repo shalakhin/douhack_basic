@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-15 02:29+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: apps/core/views.py:35
+msgid "Sorry but registration is closed!"
+msgstr "Извините, но регистрация закрыта!"
+
+#: apps/core/views.py:60
+msgid "You successfully confirmed participation! Thanks!"
+msgstr "Вы успешно подтвердили регистрацию! Спасибо!"
+
+#: apps/core/views.py:66
+msgid "You haven't confirmed your participation!"
+msgstr "Вы не подтвердили ваше участие!"
+
+#: apps/registrations/models.py:13
+msgid "Name"
+msgstr "Имя"
+
+#: apps/registrations/models.py:14
+msgid "Your phone number"
+msgstr "Ваш номер телефона"
+
+#: apps/registrations/models.py:15
+msgid "E-mail"
+msgstr "E-mail"
+
+#: apps/registrations/models.py:16
+msgid "City"
+msgstr "Город"
+
+#: apps/registrations/models.py:18
+msgid "Need help apartments"
+msgstr "Вам нужна помощь в поиске жилья на время хакатона?"
+
+#: apps/registrations/models.py:20
+msgid "Need help to find railway station"
+msgstr ""
+"Вам нужно помочь добраться от ж/д станции до места проведения хакатона?"
+
+#: apps/registrations/models.py:22
+msgid "How did you get to know about the event?"
+msgstr "Как вы узнали про мероприятие"
+
+#: apps/registrations/models.py:24
+msgid "Confirmation code"
+msgstr "Код подтверждения"
+
+#: apps/registrations/models.py:26
+msgid "Participation confirmed"
+msgstr "Участие подтверждено"
+
+#: apps/registrations/models.py:28
+msgid "Created"
+msgstr "Создано"
+
+#: apps/registrations/models.py:29
+msgid "Updated"
+msgstr "Обновлено"
+
+#: apps/registrations/models.py:30
+msgid "Internal comments"
+msgstr "Внутренний комментарий"
+
+#: apps/registrations/models.py:31
+msgid "visible only for registered users"
+msgstr "Видимо только для зарегистрированных пользователей"
+
+#: apps/registrations/tasks.py:26
+msgid "Mail subject"
+msgstr "Подтверждение на регистрацию"
+
+#: douhack_basic/settings/_base.py:106
+msgid "English"
+msgstr "Английский"
+
+#: douhack_basic/settings/_base.py:107
+msgid "Russian"
+msgstr "Русский"
+
+#: douhack_basic/settings/_base.py:108
+msgid "Ukrainian"
+msgstr "Украинский"
+
+#: templates/404.html:10
+msgid "Something went wrong!"
+msgstr "Что-то пошло не так."
+
+#: templates/base.html:8
+msgid "DOU Хакатон в Севастополе - 18 мая"
+msgstr ""
+
+#: templates/base.html:44
+msgid "DOU Хакатон в Севастополе"
+msgstr ""
+
+#: templates/base.html:47
+msgid "Что это?"
+msgstr ""
+
+#: templates/registrations/form.html:12
+msgid "Registration is closed!"
+msgstr "Регистрация закрыта!"
+
+#~ msgid "You are registered"
+#~ msgstr "Вы уже зарегистрированы"

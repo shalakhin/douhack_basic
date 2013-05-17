@@ -1,55 +1,56 @@
 {% load staticfiles i18n %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
         <title>
             {% block title %}
                 {% trans "DOU Хакатон в Севастополе - 18 мая" %}
             {% endblock %}
         </title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% block extra-head %}
-		<!-- Le styles -->
-		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-		<link href="{% static 'css/bootstrap-responsive.min.css' %}" rel="stylesheet">
-		<link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <!-- Le styles -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-responsive.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/ga.js' %}"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
-		<script type="text/javascript" src="//vk.com/js/api/openapi.js?88"></script>
-		<script type="text/javascript">
-			VK.init({apiId: 3581781, onlyWidgets: true});
-		</script>
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?88"></script>
+        <script type="text/javascript">
+            VK.init({apiId: 3581781, onlyWidgets: true});
+        </script>
         {% endblock %}
-	</head>
-	<body>
+    </head>
+    <body>
 
-		<div id="fb-root"></div>
-		<script>
-			(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
 
-		<div class="container" style="margin-top: 150px;">
-			<div class="row">
-				<div class="span6">
-					<h1>{% trans "DOU Хакатон в Севастополе" %}</h1>
-				</div>
-				<div class="span6" style="padding-top: 15px;">
-					<a href="{% url 'home' %}" class="btn btn-danger btn-with-white-border">{% trans "Что это?" %}</a>
-					<a href="{% url 'contacts' %}" class="btn btn-danger btn-with-white-border">Контакты</a>
-					<a href="{% url 'register' %}" class="btn btn-danger btn-with-white-border">Регистрация</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span12">
+        <div class="container" style="margin-top: 150px;">
+            <div class="row">
+                <div class="span6">
+                    <h1>{% trans "DOU Хакатон в Севастополе" %}</h1>
+                </div>
+                <div class="span6" style="padding-top: 15px;">
+                    <a href="{% url 'home' %}" class="btn btn-danger btn-with-white-border">{% trans "Что это?" %}</a>
+                    <a href="{% url 'contacts' %}" class="btn btn-danger btn-with-white-border">Контакты</a>
+                    <a href="{% url 'register' %}" class="btn btn-danger btn-with-white-border">Регистрация</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
                     <ul class="social-buttons">
                         <li><!-- Put this div tag to the place, where the Like block will be -->
                             <div id="vk_like"></div>
@@ -61,41 +62,50 @@
                             <div class="fb-like" data-href="http://douhack.herokuapp.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
                         </li>
                     </ul>
-				</div>
-			</div>
+                </div>
+            </div>
 
-	        {% block header %}{% endblock %}
-	        {% block content %}{% endblock %}
-	        {% block footer %}{% endblock %}
 
-	        <div class="row" style="margin-top: 20px;">
+            {% if messages %}
+            <div class="alert">
+                {% for message in messages %}
+                <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% block header %}{% endblock %}
+            {% block content %}{% endblock %}
+            {% block footer %}{% endblock %}
+
+            <div class="row" style="margin-top: 20px;">
                 <div class="span12">
                     <p>Хакатон проводится группой <a href="/contacts" class="red-link">активистов</a> при поддержке <a href="http://dou.ua" class="red-link">DOU.ua</a> и, конечно же, компаний-партнеров:</p>
                     <ul class="thumbnails">
-	                    <li class="span4">
-	                    	<a href="http://smartbit.in.ua">
-		                        <div class="thumbnail">
-		                            <img alt="SmartBit" src="{% static 'img/smartbit.png' %}" style="max-height: 57px;" />
-		                        </div>
-		                    </a>
-	                    </li>
-	                    <li class="span4">
-	                    	<a href="http://dou.ua">
-		                        <div class="thumbnail">
-		                            <img alt="Developers.Org.Ua" src="{% static 'img/dou.jpg' %}" style="max-height: 57px;" />
-		                        </div>
-		                    </a>
-	                    </li>
-	                    <li class="span4">
-	                    	<a href="http://sevstar.net">
-		                        <div class="thumbnail">
-		                            <img alt="SevStar" src="{% static 'img/sevstar.jpg' %}" style="max-height: 57px;" />
-		                        </div>
-		                    </a>
-	                    </li>
-	                </ul>
+                        <li class="span4">
+                            <a href="http://smartbit.in.ua">
+                                <div class="thumbnail">
+                                    <img alt="SmartBit" src="{% static 'img/smartbit.png' %}" style="max-height: 57px;" />
+                                </div>
+                            </a>
+                        </li>
+                        <li class="span4">
+                            <a href="http://dou.ua">
+                                <div class="thumbnail">
+                                    <img alt="Developers.Org.Ua" src="{% static 'img/dou.jpg' %}" style="max-height: 57px;" />
+                                </div>
+                            </a>
+                        </li>
+                        <li class="span4">
+                            <a href="www.websitemovers.com">
+                                <div class="thumbnail">
+                                    <img alt="Websitemovers" src="{% static 'img/wsm.jpg' %}" style="max-height: 57px;" />
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-	        </div>
-		</div>
-	</body>
+            </div>
+        </div>
+    </body>
 </html>

@@ -9,14 +9,25 @@
 {% block content %}
 <div class="row">
     <div class="span12">
-        <form class="form-horizontal" action="{{ request.path }}" method="post" accept-charset="utf-8">
-            <legend>Регистрационная форма участника</legend>
-            {% csrf_token %}
-            {{ form.as_p }}
-            <div class="form-actions">
-                <button type="submit" class="btn btn-danger">Зарегистрироваться</button>
-            </div>
-        </form>
+        <h1>{% trans "Registration is closed!" %}</h1>
+        {# <form class="form-horizontal" action="{{ request.path }}" method="post" accept-charset="utf-8"> #}
+        {#     <legend>Регистрационная форма участника</legend> #}
+        {#     {% csrf_token %} #}
+        {#     {% for field in form %} #}
+        {#         <div class="control-group {% if field.errors %}error{% endif %}"> #}
+        {#             <label class="control-label" for="{{ field.auto_id }}">{{ field.label }}</label> #}
+        {#             <div class="controls"> #}
+        {#                 {{ field }} #}
+        {#                 {% if field.errors %} #}
+        {#                     <span class="help-inline">{{ field.errors }}</span> #}
+        {#                 {% endif %} #}
+        {#             </div> #}
+        {#         </div> #}
+        {#     {% endfor %} #}
+        {#     <div class="form-actions"> #}
+        {#         <button type="submit" class="btn btn-danger">Зарегистрироваться</button> #}
+        {#     </div> #}
+        {# </form> #}
     </div>
 </div>
 {% endblock %}

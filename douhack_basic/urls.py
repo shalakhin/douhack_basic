@@ -13,12 +13,17 @@ urlpatterns = patterns('',
     # url(r'^douhack_basic/', include('douhack_basic.foo.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^register/', 'core.views.register', name='register'),
+    url(r'^confirm/(?P<id>\d+)/(?P<code>.+)/$',
+        'core.views.confirm_registration',
+        name='confirm'),
     url('^pages/', include('django.contrib.flatpages.urls')),
 )
 
 # if settings.DEBUG:
-urlpatterns += patterns('',
+urlpatterns += patterns(
+    '',
     url(r'^m/(?P<path>.*)$', 'django.views.static.serve', {
         'document_root': settings.MEDIA_ROOT,
     }),

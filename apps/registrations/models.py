@@ -1,6 +1,8 @@
 import uuid
 
+from django.conf import settings
 from django.db import models
+from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -25,6 +27,8 @@ class Participant(models.Model):
             default=False, blank=True)
     created = models.DateTimeField(_('Created'), auto_now_add=True, blank=True)
     updated = models.DateTimeField(_('Updated'), auto_now=True, blank=True)
+    internal_comments = models.TextField(_('Internal comments'),
+        help_text=_('visible only for registered users'), blank=True)
 
     def __unicode__(self):
         return self.name
@@ -37,3 +41,11 @@ class Participant(models.Model):
 
     class Meta:
         ordering = ['-updated', '-created']
+
+    def get_confirmation_code_url(self):
+        """
+        Build confirmation code URL
+        """
+        host = settings.ALLOWED_HOSTS[0]
+        url = host + reverse('confirm', args=[self.id, self.confirmation_code])
+        return url

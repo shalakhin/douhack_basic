@@ -1,6 +1,10 @@
 import os
 import sys
+import datetime
 from unipath import Path
+
+
+from djcelery import setup_loader
 
 # Specific settings
 CONFIRM_IN_DAYS = 14
@@ -18,6 +22,7 @@ ADMINS = (
 ALLOWED_HOSTS = ['douhack.herokuapp.com']
 MANAGERS = ADMINS
 TIME_ZONE = 'Europe/Kiev'
+LOCALE_PATHS = (PROJECT_ROOT.child('locale'),)
 LANGUAGE_CODE = 'ru-UA'
 SITE_ID = 1
 USE_I18N = True
@@ -59,6 +64,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # 'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -89,7 +95,18 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'south',
     'gunicorn',
+    'djcelery',
 ) + PROJECT_APPS
+
+CELERY_TASK_RESULT_EXPIRES = datetime.timedelta(minutes=30)
+setup_loader()
+
+ugettext = lambda s: s
+LANGUAGES = (
+    ('en', ugettext('English')),
+    ('ru', ugettext('Russian')),
+    ('ua', ugettext('Ukrainian')),
+)
 
 LOGGING = {
     'version': 1,
